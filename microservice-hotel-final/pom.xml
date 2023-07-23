@@ -19,7 +19,8 @@
 		<module>reservation-service</module>
 		<module>sercurity</module>
 		<module>discovery-server</module>
-	</modules>
+        <module>api-gateway</module>
+    </modules>
     <properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2022.0.3</spring-cloud.version>
