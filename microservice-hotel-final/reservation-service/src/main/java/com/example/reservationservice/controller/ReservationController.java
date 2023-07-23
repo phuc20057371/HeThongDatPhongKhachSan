@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/reservation")
+@RequestMapping("/reservation")
 @RequiredArgsConstructor
 public class ReservationController {
     private final ReservationService reservationService;
@@ -17,7 +17,5 @@ public class ReservationController {
     @ResponseStatus(HttpStatus.CREATED)
     public String bookingRoom(@RequestBody ReservationRequest request){
        return reservationService.bookingRoom(request);
- //       return "Booking room Successfully";
- //       return new RoomResponse();
     }
 }
