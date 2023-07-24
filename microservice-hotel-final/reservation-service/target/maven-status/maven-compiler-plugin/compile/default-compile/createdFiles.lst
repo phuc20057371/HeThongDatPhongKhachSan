@@ -1,0 +1,10 @@
+com\example\reservationservice\repository\ReservationRepository.class
+com\example\reservationservice\ReservationServiceApplication.class
+com\example\reservationservice\dto\RoomResponse.class
+com\example\reservationservice\dto\Type.class
+com\example\reservationservice\service\ReservationService.class
+com\example\reservationservice\model\Reservation.class
+com\example\reservationservice\dto\ReservationRequest.class
+com\example\reservationservice\model\Reservation$ReservationBuilder.class
+com\example\reservationservice\dto\RoomResponse$RoomResponseBuilder.class
+com\example\reservationservice\controller\ReservationController.class

@@ -1,0 +1,11 @@
+com\example\roomservice\controller\RoomController.class
+com\example\roomservice\RoomServiceApplication.class
+com\example\roomservice\service\RoomService.class
+com\example\roomservice\dto\RoomResponse.class
+com\example\roomservice\model\Room.class
+com\example\roomservice\model\Room$RoomBuilder.class
+com\example\roomservice\model\Type.class
+com\example\roomservice\repository\RoomRepository.class
+com\example\roomservice\dto\RoomRequest$RoomRequestBuilder.class
+com\example\roomservice\dto\RoomRequest.class
+com\example\roomservice\dto\RoomResponse$RoomResponseBuilder.class
