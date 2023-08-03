@@ -30,4 +30,9 @@ public class RoomController {
     public RoomResponse findRoom (@PathVariable("id") Long id){
         return roomService.findRoom(id);
     }
+
+    @PostMapping("/update/{id}")
+    public String updateRoom(@PathVariable("id") Long id){
+        return roomService.updateRoom(id);
+    }
 }

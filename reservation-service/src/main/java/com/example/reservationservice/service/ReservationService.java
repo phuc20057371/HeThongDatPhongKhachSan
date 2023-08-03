@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
 
 import java.util.Date;
 import java.util.UUID;
@@ -48,10 +49,12 @@ public class ReservationService {
             reservation.setRoomId(request.getRoomId());
             reservation.setBookingDate(new Date(System.currentTimeMillis()));
             reservationRepository.save(reservation);
-
-            return  "Booking room successfully!";
+            String respone = builder.build().post().uri("http://room-service/room/update/" + roomResponse.getId())
+                    .retrieve().bodyToMono(String.class).block();
+            //return  "Booking room successfully!";
+            return respone;
         }
-        return  "Fail!";
+        return  "Fail! This room is booked!";
     }
 
 }

@@ -33,6 +33,12 @@ public class RoomService {
         List<Room>  products = roomRepository.findAll();
         return products.stream().map(this::mapToRoomResponse).toList();
     }
+    public String updateRoom(Long id){
+        Room room = roomRepository.findById(id).orElseThrow();
+        room.setAvailable(false);
+        roomRepository.save(room);
+        return "room booked!";
+    }
 
     private RoomResponse mapToRoomResponse(Room room) {
         return RoomResponse.builder()
